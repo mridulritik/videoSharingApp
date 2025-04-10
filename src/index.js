@@ -1,12 +1,13 @@
 import dotenv from "dotenv"
-import dbConnect from "./db/index.js "
+import connectDb from "./db/index.js "
+
 
 dotenv.config({
     path:".env"
 })
 
 try {
-    dbConnect() 
+    connectDb() 
     console.log(`dbconnected`)
 } catch (error) {
     console.log(error);
